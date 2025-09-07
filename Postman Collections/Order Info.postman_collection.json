@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "9dec33c8-353c-47eb-ab0e-97634c2ef82d",
+		"name": "Order Info",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42570645"
+	},
+	"item": [
+		{
+			"name": "saveOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"foodItemsList\": [\r\n        {\r\n            \"id\": 2,\r\n            \"itemName\": \"Biryani\",\r\n            \"itemDescription\": \"Delicious Mutton Biryani\",\r\n            \"price\": 1499,\r\n            \"restaurantId\": 1,\r\n            \"quantity\": 5,\r\n            \"veg\": false\r\n        }\r\n    ],\r\n    \"restaurant\": {\r\n        \"id\": 1,\r\n        \"name\": \"The Gourmet Spot\",\r\n        \"address\": \"123 Main Street\",\r\n        \"city\": \"New York\",\r\n        \"restaurantDescription\": \"A cozy place offering delicious gourmet meals.\"\r\n    },\r\n    \"userId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9094/order/saveOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9094",
+					"path": [
+						"order",
+						"saveOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

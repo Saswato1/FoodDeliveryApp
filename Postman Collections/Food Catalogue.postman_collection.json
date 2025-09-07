@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "e90de59c-e982-4571-a76e-3aed182899e7",
+		"name": "Food Catalogue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42570645"
+	},
+	"item": [
+		{
+			"name": "addFoodItem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemName\": \"Biryani\",\r\n    \"itemDescription\": \"Delicious Mutton Biryani\",\r\n    \"isVeg\": false,\r\n    \"price\": 1499,\r\n    \"restaurantId\": 1,\r\n    \"quantity\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9092/foodCatalogue/addFoodItem",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"foodCatalogue",
+						"addFoodItem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchRestaurantAndFoodItemsById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Spicy Bites\",\r\n    \"address\": \"456 Elm Avenue\",\r\n    \"city\": \"Los Angeles\",\r\n    \"restaurantDescription\": \"A vibrant spot known for its spicy and flavorful dishes.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9092/foodCatalogue/fetchRestaurantAndFoodItemsById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"foodCatalogue",
+						"fetchRestaurantAndFoodItemsById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

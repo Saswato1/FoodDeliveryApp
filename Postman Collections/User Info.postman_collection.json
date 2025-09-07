@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "6fe38d62-fb96-4ba4-915d-0a7f01a257c6",
+		"name": "User Info",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42570645"
+	},
+	"item": [
+		{
+			"name": "addUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"john_doe\",\r\n    \"userPassword\": \"securePass123\",\r\n    \"address\": \"789 Pine Street\",\r\n    \"city\": \"San Francisco\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9093/user/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchUserById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Spicy Bites\",\r\n    \"address\": \"456 Elm Avenue\",\r\n    \"city\": \"Los Angeles\",\r\n    \"restaurantDescription\": \"A vibrant spot known for its spicy and flavorful dishes.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9093/user/fetchUserById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9093",
+					"path": [
+						"user",
+						"fetchUserById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

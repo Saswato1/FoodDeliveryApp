@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "371c1b87-e228-451d-9dd7-b1f96337181c",
+		"name": "Restaurant Listing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42570645"
+	},
+	"item": [
+		{
+			"name": "addRestaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Spicy Bites\",\r\n    \"address\": \"456 Elm Avenue\",\r\n    \"city\": \"Los Angeles\",\r\n    \"restaurantDescription\": \"A vibrant spot known for its spicy and flavorful dishes.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/restaurant/addRestaurant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"restaurant",
+						"addRestaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Spicy Bites\",\r\n    \"address\": \"456 Elm Avenue\",\r\n    \"city\": \"Los Angeles\",\r\n    \"restaurantDescription\": \"A vibrant spot known for its spicy and flavorful dishes.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/restaurant/fetchById/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"restaurant",
+						"fetchById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchAllRestaurants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Spicy Bites\",\r\n    \"address\": \"456 Elm Avenue\",\r\n    \"city\": \"Los Angeles\",\r\n    \"restaurantDescription\": \"A vibrant spot known for its spicy and flavorful dishes.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/restaurant/fetchAllRestaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"restaurant",
+						"fetchAllRestaurants"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

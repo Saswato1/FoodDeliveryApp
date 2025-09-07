@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# IntelliJ IDEA project files
+.idea/
+
+# Local ActiveMQ installation
+apache-activemq-6.1.7/
+

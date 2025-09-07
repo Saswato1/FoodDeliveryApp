@@ -1,5 +1,6 @@
 package com.example.restaurantlisting.service;
 
+import com.example.restaurantlisting.dto.OrderEventDTO;
 import com.example.restaurantlisting.dto.RestaurantDTO;
 import com.example.restaurantlisting.entity.Restaurant;
 import com.example.restaurantlisting.mapper.RestaurantMapper;
@@ -7,6 +8,7 @@ import com.example.restaurantlisting.repo.RestaurantRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,5 +40,12 @@ public class RestaurantService {
             return new ResponseEntity<>(RestaurantMapper.INSTANCE.mapRestaurantToRestaurantDTO(restaurant.get()), HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+    // --- JMS Integration ---
+    @JmsListener(destination = "order.queue")
+    public void handleOrderPlaced(OrderEventDTO event) {
+        System.out.println("Received order event for restaurantId: " + event.getRestaurantId());
+        // Your business logic here
     }
 }
